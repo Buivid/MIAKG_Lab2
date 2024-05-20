@@ -138,7 +138,6 @@ class Figure
         printf("Wrong affine koef\n");
         break;
         }
-
     }
 
     void transform()
