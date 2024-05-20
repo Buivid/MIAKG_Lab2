@@ -83,12 +83,12 @@ int main(int argc, char *argv[])
               square.get_affine_koef(1, -10);
               break;
             case SDL_SCANCODE_UP:
-              printf("SDL_SCANCODE_KP_PLUS have been presssed\n");
-              square.get_affine_koef(2, 10);
+              printf("SDL_SCANCODE_UP have been presssed\n");
+              square.get_affine_koef(2, -10);
               break;
             case SDL_SCANCODE_DOWN:
-              printf("SDL_SCANCODE_KP_MINUS have been presssed\n");
-              square.get_affine_koef(2, -10);
+              printf("SDL_SCANCODE_DOWN have been presssed\n");
+              square.get_affine_koef(2, 10);
               break;
             case SDL_SCANCODE_Q:
               printf("SDL_SCANCODE_KP_PLUS have been presssed\n");
@@ -113,6 +113,14 @@ int main(int argc, char *argv[])
             case SDL_SCANCODE_2:
               printf("SDL_SCANCODE_2 have been presssed\n");
               n++;
+              break;
+            case SDL_SCANCODE_W:
+              printf("SDL_SCANCODE_W have been presssed\n");
+              square.get_affine_koef(5, 1);
+              break;
+            case SDL_SCANCODE_S:
+              printf("SDL_SCANCODE_S have been presssed\n");
+              square.get_affine_koef(5, -1);
               break;
             case SDL_SCANCODE_ESCAPE:
               quit = true;

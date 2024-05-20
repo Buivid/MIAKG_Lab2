@@ -64,24 +64,13 @@ void line (SDL_Surface *s, int x1, int y1, int x2, int y2, int color)
 void draw(SDL_Surface *s, Figure square, int n)
 {
 
+
+  int count = n;
+
   square.transform();
   square.draw(s);
-  square.nested_figure(s, n);
-  // for(int i=0; i<4; i++)
-  // {
-  //   // if(i==3)
-  //   // {
-  //   //   p[i]=square[i];
-  //   //   p[0]=square[0];
-  //   //   line(s, p[i].x, p[i].y, p[0].x, p[0].y, RGB32(0, 255, 0));
-  //   // }
-  //   // else
-  //   // {
-  //   // p[i]=square[i];
-  //   // p[i+1]=square[i+1];
-  //   // line(s, p[i].x, p[i].y, p[i+1].x, p[i+1].y, RGB32(0, 255, 0));
-  //   // }
-  // }
+  square.nested_figure(s, n, count);
+
 
   // или использу¤ макрос можно получить код цвета:
   //   RGB32(0, 255, 0) эквивалентно записи 0x0000FF00
